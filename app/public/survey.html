@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Friend Finder Survey</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+  <body>
+    <div class="jumbotron">
+      <div class="container">
+        <h1 class="display-4">Friend Finder Survey</h1>
+        <p class="lead">Take this survey to find a new friend!</p>
+      </div>
+
+
+      <h4 class="">Choose your answer by how much you would disagree or agree to the question. 1 is completley disagree and 5 is completley
+        agree.
+      </h4>
+
+      <input class="form-control" id="name" type="text" placeholder="Your name">
+      <form>
+        <div class="form-group">
+          <label for="exampleFormControlFile1">Inport or link a Picture</label>
+          <input class="form-control" id="photo" type="text" placeholder="Your Picture">
+
+        </div>
+      </form>
+      <h1>Question 1</h1>
+      <p class="lead bg-info text-white">
+        Your mind is always buzzing with unexplored ideas and plans.</p>
+      <select class="form-control browser-default" id="q1">
+        <option value="empty"></option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+
+      <h1>Question 2</h1>
+      <p class="lead bg-info text-white">Long walks on the beach?</p>
+      <select class="form-control browser-default" id="q2">
+        <option value="empty"></option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+
+      <h1>Question 3</h1>
+      <p class="lead bg-info text-white">Do you like Pina Coladas?</p>
+      <select class="form-control browser-default" id="q3">
+        <option value="empty"></option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+
+      </select>
+
+      <h1>Question 4</h1>
+      <p class="lead bg-info text-white">Going out partying</p>
+      <select class="form-control browser-default" id="q4">
+        <option value="empty"></option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+
+      </select>
+
+      <h1>Question 5</h1>
+      <p class="lead bg-info text-white">Hiking instead of partying</p>
+      <select class="form-control browser-default" id="q5">
+        <option value="empty"></option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+
+      </select>
+
+      <h1>Question 6</h1>
+      <p class="lead bg-info text-white">YEET?</p>
+      <select class="form-control browser-default" id="q6">
+        <option value="empty"></option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+
+      </select>
+
+      <h1>Question 7</h1>
+      <p class="lead bg-info text-white browser-default">People can rarely upset you.</p>
+      <select class="form-control browser-default" id="q7">
+        <option value="empty"></option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+
+      </select>
+
+
+      <h1>Question 8</h1>
+      <p class="lead bg-info text-white browser-default"> People really upset you.</p>
+      <select class="form-control browser-default" id="q8">
+        <option value="empty"></option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+
+      </select>
+
+      <h1>Question 9</h1>
+      <p class="lead bg-info text-white">You feel more energetic after spending time with a group of people.</p>
+      <select class="form-control browser-default" id="q9">
+        <option value="empty"></option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+
+      </select>
+
+      <h1>Question 10</h1>
+      <p class="lead bg-info text-white">It is often difficult for you to relate to other people’s feelings.
+      </p>
+      <select class="form-control browser-default" id="q10">
+        <option value="empty"></option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+
+      </select>
+
+      <button type="submit" class="btn btn-primary" id="submitButton">Submit</button>
+
+    </div>
+    <div id="results-modal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+
+            <h2 class="modal-title">Best Match</h2>
+          </div>
+          <div class="modal-body">
+            <h2 id="match-name"></h2>
+            <img src="" alt="" id="match-img">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+  <script>
+    $(document).ready(function () {
+
+      // var config = {
+      //   ".chosen-select": {},
+      //   ".chosen-select-deselect": {
+      //     allow_single_delselect: true
+      //   },
+      //   "chosen-select-no-single": {
+      //     disable_search_threshold: 10
+      //   },
+      //   "chosen-select-no-results": {
+      //     no_results_text: "Oops,nothing found!"
+      //   },
+      //   ".chosen-select-width": {
+      //     width: "95%"
+      //   }
+
+
+
+      // };
+      // for (var selector in config) {
+      //   $(selector).chosen(config[selector]);
+      // }
+
+      $("#submitButton").on("click", function (event) {
+
+        event.preventDefault();
+        var valid = true;
+        if ($("#name").val() === "" || $("#photo").val() === "") {
+          valid = false;
+        } else if ($("#question1").val() === "empty" || $("#question2").val() === "empty" || $("#question3").val() ===
+          "empty" || $("#question4").val() === "empty" || $("#question5").val() === "empty" || $("#question6").val() ===
+          "empty" || $("#question7").val() === "empty" || $("#question8").val() === "empty" || $("#question9").val() ===
+          "empty" || $("#question10").val() === "empty") {
+          valid = false;
+        }
+        if (valid === true) {
+          var userInput = {
+            name: $('#userName').val(),
+            photo: $('#userPhoto').val(),
+            scores: [
+              $('#q1').val(),
+              $('#q2').val(),
+              $('#q3').val(),
+              $('#q4').val(),
+              $('#q5').val(),
+              $('#q6').val(),
+              $('#q7').val(),
+              $('#q8').val(),
+              $('#q9').val(),
+              $('#q10').val()
+            ]
+
+          };
+
+
+          // Add user inputs to friends list
+          var currentURL = window.location.origin;
+          $.post(currentURL + '/api/friends', userInput, function (data) {
+
+            // Set the name and image values of friend match
+
+            $("#match-name").text(data.matchName);
+            $("#match-img").attr("src", data.matchImage);
+
+            $("#results-modal").modal("toggle");
+
+
+          });
+
+          //clear form after submission
+          $('#name').val("");
+          $('#photo').val("");
+          $('#q1').val("");
+          $('#q2').val("");
+          $('#q3').val("");
+          $('#q4').val("");
+          $('#q5').val("");
+          $('#q6').val("");
+          $('#q7').val("");
+          $('#q8').val("");
+          $('#q9').val("");
+          $('#q10').val("");
+        } else {
+          // If a required field is missing, show alert
+          alert("Survey is incomplete!");
+        }
+      });
+
+    });
+  </script>
+
+</html>
