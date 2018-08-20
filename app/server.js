@@ -11,8 +11,7 @@ var PORT = process.env.PORT || 9090;
 // ROUTER
 // The below points our server to a series of "route" files.
 // These routes give our server a "map" of how to respond when users visit or request data from various URLs.
-var htmlRouter = require('./routes/htmlRoutes')(app);
-var apiRouter = require('./routes/apiRoutes')(app);
+
 
 
 
@@ -29,7 +28,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 
 
-
+var htmlRouter = require('./routes/htmlRoutes')(app);
+var apiRouter = require('./routes/apiRoutes')(app);
 
 
 app.listen(PORT, function() {

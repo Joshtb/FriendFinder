@@ -12,7 +12,7 @@ module.exports = function(app){
 
   })
 
-}
+
   // API POST Requests
   // Below code handles when a user submits a form and thus submits data to the server.
   // In each of the below cases, when a user submits form data (a JSON object)
@@ -22,12 +22,14 @@ module.exports = function(app){
   // ---------------------------------------------------------------------------
 
   app.post("/api/friends",function(req,res){
-    
+   
     //user imput it stored
     var userInput = req.body;
+console.log("ayo" + JSON.stringify(userInput));
 
-    var userResponse = userImput.scores;
-
+  
+    var userResponse = userInput.scores;
+console.log("userresponse" +userResponse)
     var matchName ="";
 
     var matchImage = "";
@@ -37,8 +39,12 @@ module.exports = function(app){
     //comparing the scores for each friend to find best match
     for (var i = 0; i < friendData.length; i++) {
       var diff = 0;
-      diff += Math.abs(friendData[i].scores[j] - userResponses[j]);
-    }
+  
+      for (var j = 0; j < userResponse.length; j++) {
+				diff += Math.abs(friendData[i].scores[j] - userResponse[j]);
+			}
+    
+    
     //if diff is the lowest record the friend match
       if (diff < totalDiff){
         totalDifference = diff;
@@ -46,7 +52,9 @@ module.exports = function(app){
         matchImage = friendData[i].photo;
      
       }
+    }
       //new friend
+      userInput;
       friendData.push(userInput);
 
 
@@ -56,3 +64,4 @@ module.exports = function(app){
 
   });
 
+}
